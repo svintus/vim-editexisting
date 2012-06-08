@@ -1,0 +1,3 @@
+Vim plugin, if buffer is already open by a Vim instance, focus its window instead of showing the silly "this file is being edited" dialog.
+
+Thie plugin is part of the original Vim distribution, putting it here for easy installation.
