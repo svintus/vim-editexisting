@@ -13,9 +13,11 @@
 " 2. When a file is edited and a swap file exists for it, try finding that
 "    other Vim and bring it to the foreground.  Requires Vim 7, because it
 "    uses the SwapExists autocommand event.
-if v:version < 700
+if v:version < 700 || has('nvim') || exists("g:loaded_editexisting")
   finish
 endif
+let g:loaded_editexisting = 1
+
 
 " Function that finds the Vim instance that is editing "filename" and brings
 " it to the foreground.
